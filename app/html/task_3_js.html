@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<!-- Обов'язковий кореневий тег -->
+<html lang="uk">
+
+<!-- Тег призначений для опису "шапки" html сторінки -->
+
+<head>
+
+  <!-- Задаємо кодування сторінки -->
+  <meta charset="utf-8">
+  <!-- Задаємо заголовок сторінки -->
+  <title>Основи JavaScript</title>
+  <!-- Задаємо автора сторінки -->
+  <meta name="author" content="Kanyinda">
+  <!-- Задаємо опис сторінки -->
+  <meta name="description" content="Основи JavaScript">
+  <!-- Задаємо ключові слова сторінки -->
+  <meta name="keywords" content="java_script,тестовий приклад,основи java_script">
+  <!-- Підключаємо css стилі -->
+  <link rel="stylesheet" href="../css/task_3_js.css">
+  <!-- Підключаємо необхідні шрифти -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Playfair+Display&family=Train+One&display=swap"
+    rel="stylesheet">
+  <!-- 1 варіант підключення JS - локально, у тезі <head> -->
+  <script type="text/javascript">
+    // Вивід тексту в консоль розробника
+    console.log("Інформаційне повідомлення");
+    console.warn("Попереджувальне повідомлення");
+    console.error("Повідомлення про помилку");
+  </script>
+
+</head>
+
+<!--Тег призначений для розміщення інформації, яку бачить кінцевий користувач-->
+
+<body>
+
+  <!-- Відображаємо даний блок, якщо JavaScript вимкнено -->
+  <noscript class="block block_end">Для правильного відображення даної сторінки <a
+      href="https://www.google.com/url?q=https://help.ria.com/index.php%3F/Knowledgebase/Article/View/647/144&sa=U&ved=2ahUKEwiu-vqCusnvAhUpCRAIHdJdBvgQFjACegQIARAB&usg=AOvVaw3GfONVRPxnNd88PzkpRRph">увімкніть
+      JavaScript</a> у вашому браузері</noscript>
+
+  <div class="block_e" id="title">
+    <h1 id="title_text">Основи JavaScript</h1>
+  </div>
+
+  <!-- Сітка з трьох елементів -->
+  <div class="grid_3_column" id="grid_1">
+
+    <!-- Блок <div_1> -->
+    <div class="block_n" id="div_1">
+
+      <!-- Обробка натискань кнопок - виклик функцій із файлу task_3_js.js -->
+      <button onclick="btn_1_press()">Кнопка №1</button>
+      <button onclick="btn_2_press()">Кнопка №2</button>
+      <button onclick="btn_3_press()">Кнопка №3</button>
+
+      <hr>
+
+      <form>
+        <input type="text" id="spec_field_1" oninput="only_big_letter(this)" placeholder="Спеціалізоване поле №1"
+          title="Це поле може містити лише великі літери">
+        <input type="button" onclick="clear_spec_field_1()" value="Очистити поле">
+      </form>
+
+      <form>
+        <input type="text" id="spec_field_2" oninput="only_small_letter(this)" placeholder="Спеціалізоване поле №2"
+          title="Це поле може містити лише малі літери">
+        <input type="button" onclick="clear_spec_field_2()" value="Очистити поле">
+      </form>
+
+      <hr>
+
+      <form>
+
+        <input id="login" type="text" placeholder="Введіть логін">
+        <br>
+        <input id="password_a" type="password" placeholder="Введіть пароль">
+        <br>
+        <input id="password_b" type="password" placeholder="Повторіть пароль">
+        <br>
+        <input id="register" onclick="btn_register_press()" type="button" value="Зареєструватися">
+
+      </form>
+
+    </div>
+    <!-- Блок <div_2> -->
+    <div class="block_n" id="div_2">
+
+      <button id="flex_direction">flex_direction: row</button>
+      <button id="justify-content">justify-content: space-around</button>
+      <button id="align-items">align-items: center</button>
+
+      <hr>
+
+      <div id="flex_block">
+
+        <button id="align-items1"><img src="../img/icons/cancel.png" alt="im_3"></button>
+        
+        <img src="../img/icons/alarm.png" alt="im_1">
+        <img src="../img/icons/calendar.png" alt="im_2">
+        
+
+        <img id="img228" src="../img/bum.png" width="0" height="0" opacity: 0.0 alt="image">
+
+        
+        <img src="../img/icons/chart.png" alt="im_4">
+        <img src="../img/icons/computer.png" alt="im_5">
+        <img src="../img/icons/cut.png" alt="im_6">
+
+      </div>
+
+    </div>
+    <!-- Блок <div_3> -->
+    <div class="block_e" id="div_3">
+
+      <ul id="editable_list">
+        <li>Елемент списку №1</li>
+        <li>Елемент списку №2</li>
+        <li>Елемент списку №3</li>
+        <li>Елемент списку №4</li>
+        <li>Елемент списку №5</li>
+        <li>Елемент списку №6</li>
+        <li>Елемент списку №7</li>
+      </ul>
+
+      <hr>
+
+      <button onclick="add_li()">Додати новий елемент</button>
+      <button onclick="remove_li()">Видалити останній елемент</button>
+
+    </div>
+
+  </div>
+
+  <!-- Сітка з двох елементів -->
+  <div class="grid_2_column" id="grid_2">
+
+    <!-- Блок <div_4> -->
+    <div class="block_n" id="div_4">
+
+      <form>
+
+        <input type="checkbox" name="cb_1" id="cb1" class="test_a">
+        <label for="cb_1">Елемент №1 { #cb1 .test_a }</label>
+        <br>
+        <input type="checkbox" name="cb_2" id="cb2" class="test_b" custom_atr="39">
+        <label for="cb_2">Елемент №2 { #cb2 .test_b [custom_atr="39"] }</label>
+        <br>
+        <input type="checkbox" name="cb_3" id="cb3" class="test_c">
+        <label for="cb_3">Елемент №3 { #cb3 .test_c }</label>
+        <br>
+        <input type="checkbox" name="cb_4" id="cb4" class="test_a test_b" custom_atr="17">
+        <label for="cb_4">Елемент №4 { #cb4 .test_a .test_b [custom_atr="17"] }</label>
+        <br>
+        <input type="checkbox" name="cb_5" id="cb5" class="test_b test_c">
+        <label for="cb_5">Елемент №5 { #cb5 .test_b .test_c }</label>
+        <br>
+        <input type="checkbox" name="cb_6" id="cb6" class="test_z" custom_atr="-13">
+        <label for="cb_6">Елемент №6 { #cb6 .test_z [custom_atr="-13"] }</label>
+        <br>
+        <input type="checkbox" name="cb_7" id="cb7" class="test_b test_z">
+        <label for="cb_7">Елемент №7 { #cb7 .test_b .test_z }</label>
+        <br>
+        <input type="checkbox" name="cb_8" id="cb8" custom_atr="196">
+        <label for="cb_8">Елемент №8 { #cb8 [custom_atr="196"] }</label>
+        <br>
+        <input type="checkbox" name="cb_9" id="cb9" class="test_a" custom_atr="22">
+        <label for="cb_9">Елемент №9 { #cb9 .test_a [custom_atr="22"] }</label>
+        <hr>
+        <input type="button" onclick="check_condition_1()" value="Вибрати елементи, які мають клас <test_b>">
+        <br>
+        <input type="button" onclick="check_condition_2()" value="Вибрати елементи, які мають id #cb3 або #cb7">
+        <br>
+        <input type="button" onclick="check_condition_3()" value="Вибрати елементи, які не мають класу <test_z>">
+        <br>
+        <input type="button" onclick="check_condition_4()"
+          value="Вибрати елементи, які мають атрибут [custom_atr], значення якого є >= 25">
+        <br>
+        <input type="button" onclick="unselect_all_elements()" value="Скасувати вибір елементів">
+      </form>
+
+
+    </div>
+    <!-- Блок <div_5> -->
+    <div class="block_e" id="div_5">
+
+      <div id="animation_block">
+
+        <form id="animation_buttons">
+
+          <input id="btn_timer" type="button" value="Запустити таймер">
+          <input id="btn_interval" type="button" value="Запустити інтервал">
+
+        </form>
+
+        <div id="animation_context" class="block_e">
+
+          <img id="img" src="../img/icons/chart.png" width="120" height="160" alt="image">
+
+        </div>
+      </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- Блок <div_6> -->
+  <div class="block_e" id="div_6">
+    <a href="../index.html">Перейти на головну сторінку</a>
+  </div>
+
+  <!-- ........................................................... -->
+
+  <!-- Підключення бібліотеки jQuery -->
+  <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+  <!-- Підключення файлу task_3_js.js -->
+  <script type="text/javascript" src="../js/task_3_js.js"></script>
+  <!-- Підключаємо файлу snow.js для ефекту падіння сніжинок -->
+  <script src="../js/snow.js"></script>
+</body>
+
+<!-- Корисні посилання: -->
+<!-- https://jquery.com/ - бібліотека jQuery -->
+
+</html>

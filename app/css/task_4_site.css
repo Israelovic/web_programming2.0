@@ -1,0 +1,72 @@
+/* Стиль курсора для елементів бокового меню */
+li.nav-item {
+   cursor: pointer;
+}
+
+/* Додаткові стилі для малих екранів */
+@media only screen {
+   /* Меню сайту */
+   #menu {
+      border-right: 0px;
+      border-color: #580065;
+      background-color: #580065;
+      z-index: 5;
+}
+
+/* Додаткові стилі для середніх та великих екранів */
+@media only screen and (min-width : 576px) {
+   /* Меню сайту */
+   #menu {
+      border-right: 1px solid #6e70f1;
+   }
+   /* Основний блок сайту */
+   #context {
+      height: 100vh;
+      min-height: 100vh;
+      overflow-y: visible;
+   }
+}
+
+/* Стилі новин */
+
+.news {
+   opacity: 0.4;
+   border: 5px solid black;
+   transition: border .3s;
+   cursor: pointer;
+   
+}
+
+
+/* Стилі при наведенні на новину */
+.news:hover {
+   opacity: 1;
+   border: 1px solid #67696a;
+   transition: border .3s;
+   
+}
+
+body {
+   background-color: #4b424a;
+   color: #ffffff;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #6c757d !important;
+}
+
+.header_fixed {
+  z-index: 5;
+  position: fixed;
+  left: 10px;
+  top: 0;
+  right: 0;
+  background-color: #580065;
+}
+.btn-outline-secondary {
+    color: #2fea18;
+    border-color: #6c757d;
+}
+.text-secondary {
+    color: #ff8302!important;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Сайт новин</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/task_4_site.css">
+        <link rel="stylesheet" href="../css/scrollbar.css">
+    </head>
+    <body>
+    	
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-4 col-sm-5 px-3 pt-2 pb-0" id="menu">
+                    <header class="header">
+                    <div class="navbar-brand d-flex fs-4 text-secondary align-items-center" >
+                        <ul class="nav nav-pills flex-row">
+                            <li class="align-items-center">
+                        <img src="../img/logo.png" class="w-100">
+                        </li>
+                        <li class="nav-item nav-link d-flex align-items-center" id="menu_home" onclick="click_on_menu(this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-house-door me-2" viewBox="0 0 16 16">
+                                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                            </svg>
+                            <span>Головна сторінка</span>
+                        </li>
+                        <li class="nav-item nav-link active d-flex align-items-center" id="menu_news" onclick="click_on_menu(this)">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="1em" height="1em">
+                                <path d="M 4 3 C 2.895 3 2 3.895 2 5 L 2 18 C 2 19.657 3.343 21 5 21 L 19 21 C 20.64497 21 22 19.64497 22 18 L 22 8 A 1.0001 1.0001 0 0 0 20.984375 6.9863281 A 1.0001 1.0001 0 0 0 20 8 L 20 18 C 20 18.56503 19.56503 19 19 19 C 18.448 19 18 18.551 18 18 L 18 5 C 18 3.895 17.105 3 16 3 L 4 3 z M 7 6 L 13 6 C 13.552 6 14 6.448 14 7 L 14 8 C 14 8.552 13.552 9 13 9 L 7 9 C 6.448 9 6 8.552 6 8 L 6 7 C 6 6.448 6.448 6 7 6 z M 7 12 L 13 12 C 13.552 12 14 12.448 14 13 C 14 13.552 13.552 14 13 14 L 7 14 C 6.448 14 6 13.552 6 13 C 6 12.448 6.448 12 7 12 z M 7 16 L 13 16 C 13.552 16 14 16.448 14 17 C 14 17.552 13.552 18 13 18 L 7 18 C 6.448 18 6 17.552 6 17 C 6 16.448 6.448 16 7 16 z"/>
+                            </svg>
+                            <span>Новини</span>
+                        <li class="nav-item nav-link d-flex align-items-center" id="menu_task" onclick="click_on_menu(this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-list-task me-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+                                <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+                                <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
+                            </svg>
+                            <span>Завдання</span>
+                        </li>
+                    </ul>
+                    </div>
+                </header>
+                </div>
+                <div class="col-lg-12 col-md-8 col-sm-7" id="context">
+                    <div id="div_news" class="container-fluid p-0 my-3">
+                        <div class="row g-3 px-2" id="news">
+                        </div>
+                        <div class="my-3 mx-2 btn btn-outline-secondary d-block" id="load" onclick="load_more_news(8)">Показати більше новин</div>
+                    </div>
+                    <div id="div_task" hidden>
+                        <h2 class="text-center m-3">Варіант №1 - Сайт відображення новин</h2>
+                        <hr>
+
+                        <ul>
+                            <li>
+                                Навігація - шапка сайту
+                                <ul>
+                                    <li>Головна сторінка</li>
+                                    <li>Новини</li>
+                                    <li>Завдання</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>Головна сторінка - перехід на index.html</li>
+                            <li>Новини - відображення списку новин</li>
+                            <li>Завдання - відображення варіанту завдання студента</li>
+                            <br>
+                            <li>Новини у списку відображаються по 8 шт.</li>
+                            <li>Новина має заголовок, автора, час публікації та опис</li>
+                            <li>Є можливість відобразити ще 8 і т.д. за допомогою кнопки "показати більше новин"</li>
+                            <li>Опис новити приховано за промовчанням</li>
+                            <li>При виборі новини вона розгортається, відображаючи опис новини</li>
+                            <li>Загальна кількість новин - 28</li>
+                            <li>Дані зберігаються у папці /data</li>
+                            <li>Інформація про список новин зберігається у файлі data.txt</li>
+                            <li>Стиль оформлення сайту - на вибір студента</li>
+                            <li>Для верстки сайту використовується Bootstrap_5</li>
+                            <li>Для роботи з Ajax використовується jQuery_3</li>
+                            <li>Bootstrap та jQuery підключаються за допомогою CDN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mysoundEl"></div>
+        <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content bg-secondary" id="modal_content"></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <script src="../js/task_4_site.js"></script>
+    </body>
+</html>
